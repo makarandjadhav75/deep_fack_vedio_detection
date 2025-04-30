@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/jquery-ui.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    <title>Deepfake Detection</title>
+</head>
+<body>
+    {% include 'nav-bar.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="footer fixed-bottom" style="background: linear-gradient(to right, #0a466f, #4177a5); padding: 10px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);">
+        <div class="container">
+            <center><span class="text-muted" style="color: #fff;">Copyright @ {% now 'Y' %}</span></center>
+        </div>
+    </footer>
+
+    <script src="/static/js/jquery-3.4.1.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/jquery-ui.min.js"></script>
+    
+    {% block js_cripts %}
+    {% endblock %}
+</body>
+</html>
